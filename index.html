@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <title>Solo Mode</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: linear-gradient(to bottom left, rgba(0, 128, 0, 0.5), rgba(0, 128, 0, 0.05), rgba(255, 255, 255, 1)); /* تدرج من الأخضر الغامق قليلاً إلى الأبيض */
+        }
+
+        .container {
+            padding: 20px;
+            text-align: center;
+        }
+
+        .header {
+            position: relative;
+            height: 100px; /* زيادة ارتفاع الهيدر لزيادة المسافة بين السهم والعناصر */
+        }
+
+        .back-arrow {
+            position: absolute;
+            top: 10px; /* رفع السهم إلى أقصى الزاوية العلوية اليسرى */
+            left: 10px;
+            width: 30px;
+            height: 30px;
+        }
+
+        /* العبارة الأولى في الشريط العلوي */
+        .header .title {
+            font-size: 18px;
+            font-weight: bold;
+            position: absolute;
+            top: 10px;
+            left: 50%;
+            transform: translateX(-50%); /* لجعل النص متمركزًا في الشريط العلوي */
+        }
+
+        /* العبارة الثانية الموجودة في المحتوى الرئيسي */
+        .main-title {
+            text-align: left;
+            font-size: 24px;
+            margin-bottom: 10px;
+            position: relative;
+            top: -20px; /* رفع العبارة قليلاً إلى الأعلى */
+        }
+
+        .list-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 0;
+            margin-bottom: 5px; /* زيادة طفيفة جدًا في المسافة بين العناصر */
+        }
+
+        .list-item img {
+            width: 20px;
+            height: 20px;
+            margin-right: 10px; /* إضافة مسافة بين الأيقونة والنص */
+        }
+
+        .list-item span {
+            font-size: 16px;
+            flex-grow: 1;
+            text-align: left; /* جعل النص يصطف على اليسار */
+        }
+
+        .list-item .label {
+            font-weight: bold; /* زيادة سمك الخط للعناصر مثل Account Balance */
+        }
+
+        .list-item .value {
+            font-size: 16px;
+            text-align: right;
+            flex-shrink: 0;
+            font-weight: bold; /* زيادة سمك الخط لكمية الرصيد */
+        }
+
+        .button {
+            margin-top: 20px;
+            background-color: #8bc34a;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 25px;
+            cursor: pointer;
+            font-size: 18px;
+            width: 100%;
+            margin-bottom: 100px; /* زيادة المسافة أسفل الزر */
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <div class="header">
+            <!-- سهم الرجوع -->
+            <img src="img/left-arrow.png" alt="Back" class="back-arrow">
+            <!-- العبارة الأولى في الشريط العلوي -->
+            <span class="title">Solo Mode</span>
+        </div>
+
+        <div class="content">
+            <!-- العبارة الثانية الكبيرة الموجودة في المحتوى الرئيسي -->
+            <h2 class="main-title">Solo Mode</h2>
+
+            <div class="list-item">
+                <img src="img/Account_Balance.png" alt="Account Balance Icon">
+                <span class="label">Account Balance:</span>
+                <span class="value">$0</span> <!-- تم زيادة سمك الخط هنا -->
+            </div>
+            <div class="list-item">
+                <img src="img/Number_of_Tasks.png" alt="Tasks Icon">
+                <span class="label">Number of Tasks:</span>
+                <span class="value">0</span> <!-- تم زيادة سمك الخط هنا -->
+            </div>
+            <div class="list-item">
+                <img src="img/Yesterday_Commission.png" alt="Yesterday Commission Icon">
+                <span class="label">Yesterday Commission:</span>
+                <span class="value">$0</span> <!-- تم زيادة سمك الخط هنا -->
+            </div>
+            <div class="list-item">
+                <img src="img/Commission_Today.png" alt="Commission Today Icon">
+                <span class="label">Commission Today:</span>
+                <span class="value">$0</span> <!-- تم زيادة سمك الخط هنا -->
+            </div>
+            <div class="list-item">
+                <img src="img/Task_Commission.png" alt="Task Commission Icon">
+                <span class="label">Task Commission:</span>
+                <span class="value">$0</span> <!-- تم زيادة سمك الخط هنا -->
+            </div>
+            <div class="list-item">
+                <img src="img/Cash_Gap_Between_Tasks.png" alt="Cash Gap Between Task Icon">
+                <span class="label">Cash Gap Between Task:</span>
+                <span class="value">$0</span> <!-- تم زيادة سمك الخط هنا -->
+            </div>
+            <div class="list-item">
+                <img src="img/Double_Commission.png" alt="Double Commission Icon">
+                <span class="label">Double Commission:</span>
+                <span class="value">$0</span> <!-- تم زيادة سمك الخط هنا -->
+            </div>
+            <button class="button">Start</button>
+        </div>
+    </div>
+
+</body>
+</html>
